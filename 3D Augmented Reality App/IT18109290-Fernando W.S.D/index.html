@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	<head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="johannes_o" src="/Model/source/Johannes_Benk_C.obj"></a-asset-item>
+				<a-asset-item id="johannes_m" src="/Model/source/Johannes_Benk_C.mtl"></a-asset-item>
+			</a-assets>
+			
+			<a-marker type='pattern' url="/Marker/pattern-L.patt">
+				<a-entity obj-model="obj: #johannes_o; mtl: #johannes_m" position="0 0 0" rotation="0 0 0" scale="0.1 0.1 0.1"></a-entity>
+				<a-text value="Fernando W.S.D" position="-1 0 1" color="white">
+				<a-text value="Ehrengrab Johannes Benk" position="-0.1 0 0.5" color="white">
+				</a-marker>
+				<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>

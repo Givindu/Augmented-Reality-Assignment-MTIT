@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+	<head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="forstner_o" src="/Model/source/Forstner_C.obj"></a-asset-item>
+				<a-asset-item id="forstner_m" src="/Model/source/Forstner_C.mtl"></a-asset-item>
+			</a-assets>
+			
+			<a-marker type='pattern' url="/Marker/pattern-N.patt">
+				<a-entity obj-model="obj: #forstner_o; mtl: #forstner_m" position="0 -2 0" rotation="-110 0 0" scale="0.185 0.185 0.155">
+				</a-entity>
+				<a-text value="Perera H.G.G.M" position="-1 0 1" color="white">
+				<a-text value="Grab Forstner von Billau" position="-0.1 0 0.5" color="white">
+				</a-marker>
+				<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
